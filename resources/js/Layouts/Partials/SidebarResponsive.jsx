@@ -28,7 +28,7 @@ export default function SidebarResponsive({url, auth}) {
             <ApplicationLogo />
             <nav className="grid items-start text-sm font-semibold lg:px-4">
                 <div className="px-3 py-2 text-sm font-semibold text-foreground">Dashboard</div>
-                <NavLinkResponsive url={route('dashboard')} active={url.startsWith('dashboard')} title="Dashboard" icon={IconDashboard} />
+                <NavLinkResponsive url={route('dashboard')} active={url.startsWith('/dashboard')} title="Dashboard" icon={IconDashboard} />
 
                 <div className="px-3 py-2 text-sm font-semibold text-foreground">Statistik</div>
                 <NavLinkResponsive url="#" title="Statistik Peminjaman" icon={IconChartDots2} />
