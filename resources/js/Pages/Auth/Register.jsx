@@ -1,9 +1,5 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
-import { Alert, AlertDescription } from '@/Components/ui/alert';
 import { Button } from '@/Components/ui/button';
 import { Input } from '@/Components/ui/input';
 import { Label } from '@/Components/ui/label';
@@ -41,78 +37,76 @@ export default function Register() {
                             </p>
                         </div>
                         <form onSubmit={submit}>
-                            <div className='grid gap-4'>
-                            <div className='grid gap-2'>
-                                <Label htmlFor="name">Nama</Label>
+                            <div className="grid gap-4">
+                                <div className="grid gap-2">
+                                    <Label htmlFor="name">Nama</Label>
 
-                                <Input
-                                    id="name"
-                                    name="name"
-                                    value={data.name}
-                                    autoComplete="name"
-                                    onChange={onHandleChange}
-                                />
+                                    <Input
+                                        id="name"
+                                        name="name"
+                                        value={data.name}
+                                        autoComplete="name"
+                                        onChange={onHandleChange}
+                                    />
 
-                                {errors.name && ( <InputError message={errors.name} />
-                            )}
-                            </div>
+                                    {errors.name && <InputError message={errors.name} />}
+                                </div>
 
-                            <div className='grid gap-2'>
-                                <Label htmlFor="email">Email</Label>
+                                <div className="grid gap-2">
+                                    <Label htmlFor="email">Email</Label>
 
-                                <Input
-                                    id="email"
-                                    name="email"
-                                    value={data.email}
-                                    autoComplete="username"
-                                    type="email"
-                                    onChange={onHandleChange}
-                                />
+                                    <Input
+                                        id="email"
+                                        name="email"
+                                        value={data.email}
+                                        autoComplete="username"
+                                        type="email"
+                                        onChange={onHandleChange}
+                                    />
 
-                                {errors.email && ( <InputError message={errors.email} />
-                            )}
-                            </div>
+                                    {errors.email && <InputError message={errors.email} />}
+                                </div>
 
-                            <div className='grid gap-2'>
-                                <Label htmlFor="password">Password</Label>
+                                <div className="grid gap-2">
+                                    <Label htmlFor="password">Password</Label>
 
-                                <Input
-                                    id="password"
-                                    name="password"
-                                    value={data.password}
-                                    autoComplete="new-password"
-                                    type="password"
-                                    onChange={onHandleChange}
-                                />
+                                    <Input
+                                        id="password"
+                                        name="password"
+                                        value={data.password}
+                                        autoComplete="new-password"
+                                        type="password"
+                                        onChange={onHandleChange}
+                                    />
 
-                                {errors.password && ( <InputError message={errors.password} />
-                            )}
-                            </div>
+                                    {errors.password && <InputError message={errors.password} />}
+                                </div>
 
-                            <div className='grid gap-2'>
-                                <Label htmlFor="password_confirmation">Konfirmasi Password</Label>
+                                <div className="grid gap-2">
+                                    <Label htmlFor="password_confirmation">Konfirmasi Password</Label>
 
-                                <Input
-                                    id="password_confirmation"
-                                    name="password_confirmation"
-                                    value={data.password_confirmation}
-                                    autoComplete="new-password"
-                                    type="password"
-                                    onChange={onHandleChange}
-                                />
+                                    <Input
+                                        id="password_confirmation"
+                                        name="password_confirmation"
+                                        value={data.password_confirmation}
+                                        autoComplete="new-password"
+                                        type="password"
+                                        onChange={onHandleChange}
+                                    />
 
-                                {errors.password_confirmation && ( <InputError message={errors.password_confirmation} />
-                            )}
-                            </div>
-                            <Button
-                            type="submit"
-                            variant="orange"
-                            size="xl"
-                            className="w-full"
-                            disabled={processing}
-                            >
-                                Daftar
-                            </Button>
+                                    {errors.password_confirmation && (
+                                        <InputError message={errors.password_confirmation} />
+                                    )}
+                                </div>
+                                <Button
+                                    type="submit"
+                                    variant="orange"
+                                    size="xl"
+                                    className="w-full"
+                                    disabled={processing}
+                                >
+                                    Daftar
+                                </Button>
                             </div>
                         </form>
 
