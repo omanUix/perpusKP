@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Admin\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Response;
@@ -17,7 +18,7 @@ class CategoryController extends Controller
 
 
         return inertia('Admin/Categories/Index', [
-            'categories' => $categories,
+            'categories' => CategoryResource::collection($categories),
             'page_settings' => [
                 'title' => 'Kategori',
                 'subtitle' => 'Menampilkan semua data kategori yang tersedia pada platform ini',
